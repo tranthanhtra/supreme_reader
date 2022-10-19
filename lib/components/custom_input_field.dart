@@ -45,9 +45,9 @@ class CustomInputField extends StatelessWidget {
       TextFormField(
         controller: controller,
         style: const TextStyle(
-          fontSize: 14,
-          fontWeight: FontWeight.w500,
-          color: Colors.grey,
+          fontSize: 20,
+          fontWeight: FontWeight.w700,
+          color: Colors.black,
         ),
         decoration: InputDecoration(
           filled: true,

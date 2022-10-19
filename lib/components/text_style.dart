@@ -10,8 +10,8 @@ TextStyle headerTextStyle() {
   );
 }
 class KTextStyle {
-  static const headerTextStyle = TextStyle(
-      color: AppColors.whiteshade, fontSize: 28, fontWeight: FontWeight.w700);
+  static const listTitleTextStyle = TextStyle(
+      color: Colors.black, fontSize: 18, fontWeight: FontWeight.w500);
 
   static const textFieldHeading =
   TextStyle(color: Colors.black, fontSize: 16, fontWeight: FontWeight.w500);
@@ -20,5 +20,7 @@ class KTextStyle {
       color: AppColors.hintText, fontSize: 14, fontWeight: FontWeight.w500);
 
   static const authButtonTextStyle = TextStyle(
-      fontSize: 18, fontWeight: FontWeight.w600, color: AppColors.whiteshade);
+      fontSize: 18, fontWeight: FontWeight.w600, color: AppColors.whiteShade);
+  static const sectionTitle = TextStyle(
+      color: Colors.black, fontSize: 28, fontWeight: FontWeight.w700);
 }
