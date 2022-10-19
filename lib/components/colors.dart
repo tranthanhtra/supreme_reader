@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-  static const lightsky = Color(0xFFA6C0FF);
-  static const whiteshade = Color(0xFFF8F9FA);
-  static const blue = Color(0xFF497fff);
-  static const lightblueshade = Color(0xFF758CC8);
-  static const grayshade = Color(0xFFEBEBEB);
-  static const lightblue = Color(0xFF4B68D1);
-  static const blackshade = Color(0xFF555555);
+  static const lightBlue = Color(0xFFACCBFF);
+  static const whiteShade = Color(0xFFFFFFFF);
+  static const blue = Color(0xFF78AAFF);
+  static const mediumBlue = Color(0xFF92BBFF);
+  static const blueBlue = Color(0xFF649EFF);
+  static const heavyBlue = Color(0xFF4188FF);
+  static const greyShade = Color(0xFF828282);
   static const hintText = Color(0xFFC7C7CD);
+  static const grey = Color(0xFFF2F2F2);
 }
