@@ -15,7 +15,12 @@ class CustomButton extends StatelessWidget {
       required this.onClick,
       this.backgroundColor = Colors.green,
       this.borderColor = Colors.green,
-      this.textColor = Colors.white})
+      this.textColor = Colors.white,
+      this.textStyle = const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.w700,
+        fontSize: 16,
+      )})
       : super(key: key);
 
   final String text;
@@ -23,20 +28,17 @@ class CustomButton extends StatelessWidget {
   final Color backgroundColor;
   final Color borderColor;
   final Color textColor;
+  final TextStyle textStyle;
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       child: Padding(
-        padding: const EdgeInsets.all(14),
+        padding: const EdgeInsets.all(0),
         child: Center(
           child: Text(
             text,
-            style: TextStyle(
-              color: textColor,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
-            ),
+            style: textStyle,
           ),
         ),
       ),
