@@ -35,8 +35,17 @@ class LibraryScreen extends StatelessWidget {
               style: KTextStyle.sectionTitle,
             ),
           ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 0, 0, getHeight(5)),
+            child: Container(
+              color: AppColors.grey1,
+              height: 3,
+            ),
+          ),
           Expanded(
-            child: ListView(
+            child: GridView.count(
+              childAspectRatio: 0.7,
+              crossAxisCount: 2,
               children: List.generate(
                 5,
                 (index) => const BookComponent(title: "Harry Potter"),
