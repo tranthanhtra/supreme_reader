@@ -7,14 +7,18 @@ import 'package:supreme_reader/features/preview/view/preview_screen.dart';
 import 'package:supreme_reader/utils/config.dart';
 
 class BookComponent extends StatelessWidget {
-  const BookComponent({Key? key, required this.title}) : super(key: key);
+  const BookComponent({Key? key, required this.title, required this.index})
+      : super(key: key);
 
   final String title;
+  final int index;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => Get.to(() => PreviewScreen(title: title,)),
+      onTap: () => Get.to(() => PreviewScreen(
+            title: title,
+          )),
       child: SizedBox(
         height: getHeight(250),
         width: getWidth(115),
@@ -34,6 +38,7 @@ class BookComponent extends StatelessWidget {
               child: Text(
                 title,
                 style: KTextStyle.listTitleTextStyle,
+                overflow: TextOverflow.ellipsis,
               ),
             )
           ],

@@ -47,8 +47,12 @@ class LibraryScreen extends StatelessWidget {
               childAspectRatio: 0.7,
               crossAxisCount: 2,
               children: List.generate(
-                5,
-                (index) => const BookComponent(title: "Harry Potter"),
+                homeController.listFile.length,
+                (index) => BookComponent(
+                  title:
+                      homeController.listFile[index].toString().split('/').last,
+                  index: index,
+                ),
               ),
             ),
           ),

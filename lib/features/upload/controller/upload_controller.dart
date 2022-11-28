@@ -8,7 +8,7 @@ class UploadController extends GetxController {
   late Directory? directory = Directory("");
 
   Future<void> filePicker() async {
-    directory ??= await getApplicationDocumentsDirectory();
+    directory = await getApplicationDocumentsDirectory();
     FilePickerResult? result = await FilePicker.platform.pickFiles(
       type: FileType.custom,
       allowedExtensions: ['pdf'],
@@ -18,8 +18,14 @@ class UploadController extends GetxController {
       String? path = result.files.single.path;
       if (path != null) {
         File file = File(path);
-        File newFile = await file
-            .copy(directory?.path ?? "" "/${file.path.split('/').last}");
+        var folder = Directory((directory?.path ?? "") + "/pdf");
+        if (!(await folder.exists())) {
+          await folder.create();
+          print(folder.path);
+        }
+        var newPath = folder.path + "/${file.path.split('/').last}";
+        // print(newPath);
+        File newFile = await file.copy(newPath);
       }
     } else {
       // User canceled the picker
